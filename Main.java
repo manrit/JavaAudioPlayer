@@ -13,11 +13,11 @@ public class Main {
 
 	public static void main(String[] args) throws UnsupportedAudioFileException, java.io.IOException, LineUnavailableException {
 	
-		//can create a GUI system that played until music is done or leave a scanner so we can keep playing without stippong 
+		//create a scanner so we can keep playing without stopping 
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		
+		//could not upload file - any .wav file will work for this audioplayer if its in your project folder, otherwise define the path to it
 		File file = new File("ice.wav");
 		
 		AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
@@ -37,7 +37,7 @@ public class Main {
 			switch(response) {
 				case ("P"): clip.start();
 				break;
-				case ("s"): clip.stop();
+				case ("S"): clip.stop();
 				break;
 				case ("R"): clip.setMicrosecondPosition(0);
 				break;
